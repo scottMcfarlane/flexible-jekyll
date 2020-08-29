@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      # Check for npm updates on Sundays
+      day: "sunday"
+    target-branch: updated-main
+    versioning-strategy: increase
+    allow:
+      # Allow both direct and indirect updates for all packages
+      - dependency-type: "all"
